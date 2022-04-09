@@ -15,9 +15,10 @@ from spotipy.oauth2 import SpotifyOAuth
 if __name__ == "__main__":
     print("Hello World!")
     scope = "user-library-read" # Url extender (defines what data what we get back from API) [3 recommendation for each song]
-    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=secrets.CLIENT_ID, 
-                                                   client_secret=secrets.CLIENT_SECRET,
-                                                   redirect_uri=secrets.REDIRECT_URI))
+    sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id="525dfddd96d94cb48637eeaf2bf98483",
+                                                   client_secret="84f8cbd4c3714390b84bdfbaeb870596",
+                                                   redirect_uri="http://localhost:3000",
+                                                   scope=scope))
 
     results = sp.current_user_saved_tracks()
     for idx, item in enumerate(results['items']):
