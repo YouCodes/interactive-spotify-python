@@ -1,3 +1,4 @@
 code/secrets.py
+code/.cache
 __pycache__
 .idea/
